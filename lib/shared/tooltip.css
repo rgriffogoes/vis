@@ -15,7 +15,48 @@ div.vis-tooltip {
   border: 1px solid #808074;
 
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
+  /*pointer-events: none; sticky and interactive popups */
 
   z-index: 5;
+}
+
+div.vis-tooltip .vis-tooltip-overlaps {
+  color: #666;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.vis-tooltip-nav {
+  font-size: 2em;
+  color: #000000;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.vis-tooltip-nav.disabled {
+  color: #B4B4B4;
+  cursor: default;
+}
+
+.vis-tooltip-focus{
+  position: absolute;
+  right: 8px;
+  top: 25px;
+  cursor: pointer;
+}
+.vis-tooltip-focus-text {
+  margin-top: -4px;
+  font-size: 0.9em;
+}
+.vis-tooltip-focus-button {
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  border: 5px #000000 double;
+  transition: transform 200ms ease;
+}
+
+.vis-tooltip-focus:hover .vis-tooltip-focus-button{
+  transform: scale(1.1);
 }
